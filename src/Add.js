@@ -21,6 +21,7 @@ const onStarClick=(nextValue, prevValue, name)=> {
 
   return (
     <>
+    
       <Modal
         show={show} 
         onHide={handleClose}

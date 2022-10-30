@@ -2,15 +2,16 @@ import React from 'react'
 import StarRatingComponent from 'react-star-rating-component';
 import  { useState } from 'react'
 
+
 const Search = ({search, byrate, rateSearch}) => {
     const [rating, setrating] = useState(1)
     const onStarClick=(nextValue, prevValue, name)=> {
       byrate( nextValue);
       }
   return (
-    <div>
+    <div className='firstpart'>
         <input type="text"
-                placeholder="Enter Movie Name or rate" 
+                placeholder="Enter Movie Name " 
                 className="inputText"
                 onChange={(e)=>search(e.target.value)}>
                 

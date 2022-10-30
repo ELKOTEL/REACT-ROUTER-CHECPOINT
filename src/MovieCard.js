@@ -1,15 +1,18 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import StarRatingComponent from 'react-star-rating-component';
+import { Link } from "react-router-dom";
 
 const MovieCard = ({movie}) => {
+let id= movie.id
+
 
   return (
   <div>
-   <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={movie.img} style={{width:200}}/>
-      <Card.Body>
-        <Card.Title>{movie.title}</Card.Title>
+   <Card style={{ width: '18rem' }} className='card'>
+      <Card.Img variant="top" src={movie.img} style={{width:287, height:400}}/>
+      <Card.Body className='cardbody'>
+        <Card.Title className='title'>{movie.title}</Card.Title>
         <StarRatingComponent 
           name="rate1" 
           starCount={5}
@@ -18,6 +21,9 @@ const MovieCard = ({movie}) => {
         <Card.Text>
         {movie.desc}
         </Card.Text>
+        
+        <button> <Link to={"/Newpage/" + id}>Description&Trailer</Link> </button>
+       
 
       </Card.Body>
     </Card>

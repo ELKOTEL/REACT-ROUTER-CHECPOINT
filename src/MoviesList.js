@@ -10,13 +10,17 @@ const MoviesList = ({movies,addMovie}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
+    <div className='secondpart' >
+      
       <Button variant="primary" onClick={handleShow}>
         ADD NEW MOVIE
       </Button>
+     
       <Add show={show} handleClose={handleClose} 
-      addMovie={addMovie}></Add>
+      addMovie={addMovie} ></Add>
+      <div className='cards'>
         {movies.map(el=><MovieCard movie={el}/>)}
+      </div>
     </div>
   )
 }
